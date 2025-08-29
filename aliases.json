@@ -1,0 +1,3875 @@
+{
+  "bh_phi_nhan_tho": {
+    "collection": "bao_hiem",
+    "field": "bh_phi_nhan_tho",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 193,
+      "collection": "bao_hiem",
+      "field": "bh_phi_nhan_tho",
+      "special": [
+        "alias",
+        "no-data",
+        "group"
+      ],
+      "interface": "group-raw",
+      "options": {
+        "start": "first"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": true,
+      "sort": 13,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": [
+        {
+          "name": "bh phi nhân thọ",
+          "rule": {
+            "_and": [
+              {
+                "loai_bao_hiem": {
+                  "_eq": "Phi nhân thọ / Sức khỏe"
+                }
+              }
+            ]
+          },
+          "hidden": false,
+          "options": {}
+        }
+      ],
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "bh_nhan_tho": {
+    "collection": "bao_hiem",
+    "field": "bh_nhan_tho",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 194,
+      "collection": "bao_hiem",
+      "field": "bh_nhan_tho",
+      "special": [
+        "alias",
+        "no-data",
+        "group"
+      ],
+      "interface": "group-raw",
+      "options": {
+        "start": "first"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": true,
+      "sort": 14,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": [
+        {
+          "name": "bh nhân thọ",
+          "rule": {
+            "_and": [
+              {
+                "loai_bao_hiem": {
+                  "_eq": "Nhân thọ"
+                }
+              }
+            ]
+          },
+          "hidden": false,
+          "options": {}
+        }
+      ],
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "thong_tin_san_pham_chinh": {
+    "collection": "bao_hiem_nhan_tho",
+    "field": "thong_tin_san_pham_chinh",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 912,
+      "collection": "bao_hiem_nhan_tho",
+      "field": "thong_tin_san_pham_chinh",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": "group-raw",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 3,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "thong_tin_tong_quan": {
+    "collection": "bao_hiem_suc_khoe_v2",
+    "field": "thong_tin_tong_quan",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 1409,
+      "collection": "bao_hiem_suc_khoe_v2",
+      "field": "thong_tin_tong_quan",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": null,
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 2,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "cac_quyen_loi_san_pham_chinh_khac": {
+    "collection": "bao_hiem_nhan_tho",
+    "field": "cac_quyen_loi_san_pham_chinh_khac",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 889,
+      "collection": "bao_hiem_nhan_tho",
+      "field": "cac_quyen_loi_san_pham_chinh_khac",
+      "special": [
+        "o2m"
+      ],
+      "interface": "list-o2m",
+      "options": {
+        "layout": "table"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 4,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "san_pham_bo_tro": {
+    "collection": "bao_hiem_nhan_tho",
+    "field": "san_pham_bo_tro",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 906,
+      "collection": "bao_hiem_nhan_tho",
+      "field": "san_pham_bo_tro",
+      "special": [
+        "o2m"
+      ],
+      "interface": "list-o2m",
+      "options": {
+        "layout": "table"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 6,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "cac_quyen_loi_chinh": {
+    "collection": "bao_hiem_suc_khoe_v2",
+    "field": "cac_quyen_loi_chinh",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 1394,
+      "collection": "bao_hiem_suc_khoe_v2",
+      "field": "cac_quyen_loi_chinh",
+      "special": [
+        "o2m"
+      ],
+      "interface": "list-o2m",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 4,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "quyen_loi_bo_tro": {
+    "collection": "bao_hiem_suc_khoe_v2",
+    "field": "quyen_loi_bo_tro",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 1404,
+      "collection": "bao_hiem_suc_khoe_v2",
+      "field": "quyen_loi_bo_tro",
+      "special": [
+        "o2m"
+      ],
+      "interface": "list-o2m",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 3,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "tai_san_the_chap": {
+    "collection": "cac_khoan_no",
+    "field": "tai_san_the_chap",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 462,
+      "collection": "cac_khoan_no",
+      "field": "tai_san_the_chap",
+      "special": [
+        "m2a"
+      ],
+      "interface": "list-m2a",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 2,
+      "width": "half",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": "thong_tin_bo_sung",
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "thon_tin_hien_tai_cua_khoan_no": {
+    "collection": "cac_khoan_no",
+    "field": "thon_tin_hien_tai_cua_khoan_no",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 470,
+      "collection": "cac_khoan_no",
+      "field": "thon_tin_hien_tai_cua_khoan_no",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": "group-raw",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 9,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "thong_tin_bo_sung": {
+    "collection": "cac_khoan_no",
+    "field": "thong_tin_bo_sung",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 471,
+      "collection": "cac_khoan_no",
+      "field": "thong_tin_bo_sung",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": "group-raw",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 10,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "thong_tin_chi_tieu_ve_khoan_no": {
+    "collection": "cac_khoan_no",
+    "field": "thong_tin_chi_tieu_ve_khoan_no",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 472,
+      "collection": "cac_khoan_no",
+      "field": "thong_tin_chi_tieu_ve_khoan_no",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": "group-raw",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 8,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "thong_tin_chung_ve_khoan_no": {
+    "collection": "cac_khoan_no",
+    "field": "thong_tin_chung_ve_khoan_no",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 473,
+      "collection": "cac_khoan_no",
+      "field": "thong_tin_chung_ve_khoan_no",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": "group-raw",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 7,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "Thong_tin_chung": {
+    "collection": "bat_dong_san",
+    "field": "Thong_tin_chung",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 479,
+      "collection": "bat_dong_san",
+      "field": "Thong_tin_chung",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": "group-detail",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 6,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "chi_tiet": {
+    "collection": "bat_dong_san",
+    "field": "chi_tiet",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 480,
+      "collection": "bat_dong_san",
+      "field": "chi_tiet",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": "group-detail",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 7,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "attachments": {
+    "collection": "free_documents",
+    "field": "attachments",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 1712,
+      "collection": "free_documents",
+      "field": "attachments",
+      "special": [
+        "files"
+      ],
+      "interface": "files",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": null,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "linked_profiles": {
+    "collection": "contract",
+    "field": "linked_profiles",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 1097,
+      "collection": "contract",
+      "field": "linked_profiles",
+      "special": [
+        "m2m"
+      ],
+      "interface": "list-m2m",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": null,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "contracts": {
+    "collection": "customer",
+    "field": "contracts",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 1108,
+      "collection": "customer",
+      "field": "contracts",
+      "special": [
+        "o2m"
+      ],
+      "interface": "list-o2m",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 8,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "profiles": {
+    "collection": "document",
+    "field": "profiles",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 1334,
+      "collection": "document",
+      "field": "profiles",
+      "special": [
+        "m2m"
+      ],
+      "interface": "list-m2m",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": null,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "relate_people": {
+    "collection": "customer_private_data_access_requests",
+    "field": "relate_people",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 1469,
+      "collection": "customer_private_data_access_requests",
+      "field": "relate_people",
+      "special": [
+        "m2m"
+      ],
+      "interface": "list-m2m",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": null,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "clone_data": {
+    "collection": "customer_profile",
+    "field": "clone_data",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 1008,
+      "collection": "customer_profile",
+      "field": "clone_data",
+      "special": [
+        "m2m"
+      ],
+      "interface": "list-m2m",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": null,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "du_lieu": {
+    "collection": "danh_muc_phan_tich",
+    "field": "du_lieu",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 1636,
+      "collection": "danh_muc_phan_tich",
+      "field": "du_lieu",
+      "special": [
+        "o2m"
+      ],
+      "interface": "list-o2m",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": null,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "bao_hiem": {
+    "collection": "khach_hang",
+    "field": "bao_hiem",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 176,
+      "collection": "khach_hang",
+      "field": "bao_hiem",
+      "special": [
+        "o2m"
+      ],
+      "interface": "list-o2m",
+      "options": {
+        "template": null,
+        "limit": 5,
+        "enableSelect": false,
+        "layout": "table",
+        "fields": [
+          "loai_bao_hiem",
+          "ten_san_pham",
+          "phi_dong",
+          "ghi_chu"
+        ]
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 1,
+      "width": "full",
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Bảo hiểm"
+        }
+      ],
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": "bao_hiem_",
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "cac_kich_ban_dong_tien": {
+    "collection": "deal",
+    "field": "cac_kich_ban_dong_tien",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 746,
+      "collection": "deal",
+      "field": "cac_kich_ban_dong_tien",
+      "special": [
+        "m2m"
+      ],
+      "interface": "list-m2m",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": null,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "chi_tieu": {
+    "collection": "khach_hang",
+    "field": "chi_tieu",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 155,
+      "collection": "khach_hang",
+      "field": "chi_tieu",
+      "special": [
+        "o2m"
+      ],
+      "interface": "list-o2m",
+      "options": {
+        "layout": "table",
+        "enableSelect": false,
+        "limit": 10,
+        "fields": [
+          "nguoi_chi",
+          "loai_chi_tieu",
+          "loai_chi_phi",
+          "so_tien"
+        ]
+      },
+      "display": null,
+      "display_options": {
+        "template": "{{loai_chi_tieu}}{{loai_chi_phi}}{{so_tien}}"
+      },
+      "readonly": false,
+      "hidden": false,
+      "sort": 1,
+      "width": "full",
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Chi tiêu"
+        },
+        {
+          "language": "vi-VN",
+          "translation": "Chi tiêu"
+        }
+      ],
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": "chi_tieu_",
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "no": {
+    "collection": "khach_hang",
+    "field": "no",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 189,
+      "collection": "khach_hang",
+      "field": "no",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": "group-detail",
+      "options": {
+        "start": "closed"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 28,
+      "width": "full",
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Nợ"
+        }
+      ],
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "phan_tich_nhu_cau_bao_hiem": {
+    "collection": "deal",
+    "field": "phan_tich_nhu_cau_bao_hiem",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 761,
+      "collection": "deal",
+      "field": "phan_tich_nhu_cau_bao_hiem",
+      "special": [
+        "m2m"
+      ],
+      "interface": "list-m2m",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 6,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": "tu_van_toan_dien",
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "tai_san": {
+    "collection": "khach_hang",
+    "field": "tai_san",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 103,
+      "collection": "khach_hang",
+      "field": "tai_san",
+      "special": [
+        "o2m"
+      ],
+      "interface": "list-o2m",
+      "options": {
+        "layout": "table",
+        "fields": [
+          "loai_tai_san",
+          "quyen_so_huu",
+          "gia_tri",
+          "ghi_chu"
+        ],
+        "limit": 10,
+        "enableSelect": false,
+        "enableSearchFilter": true
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 1,
+      "width": "full",
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Tài sản"
+        }
+      ],
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": "tai_san_",
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "thoi_quen_tin_dung": {
+    "collection": "deal",
+    "field": "thoi_quen_tin_dung",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 763,
+      "collection": "deal",
+      "field": "thoi_quen_tin_dung",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": "group-raw",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 15,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "thu_nhap": {
+    "collection": "khach_hang",
+    "field": "thu_nhap",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 142,
+      "collection": "khach_hang",
+      "field": "thu_nhap",
+      "special": [
+        "o2m"
+      ],
+      "interface": "list-o2m",
+      "options": {
+        "limit": 10,
+        "layout": "table",
+        "fields": [
+          "quyen_so_huu",
+          "loai_thu_nhap",
+          "thu_nhap",
+          "so_tien",
+          "ghi_chu"
+        ],
+        "enableSelect": false
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 1,
+      "width": "full",
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Thu nhập (Năm)"
+        }
+      ],
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": "thu_nhap_",
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "tu_van_toan_dien": {
+    "collection": "deal",
+    "field": "tu_van_toan_dien",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 766,
+      "collection": "deal",
+      "field": "tu_van_toan_dien",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": "group-raw",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": true,
+      "sort": 14,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": [
+        {
+          "name": "Hiển thị tư vấn toàn diện",
+          "rule": {
+            "_and": [
+              {
+                "loai_deal": {
+                  "_eq": "tu_van_toan_dien"
+                }
+              }
+            ]
+          },
+          "hidden": false,
+          "options": {}
+        }
+      ],
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "service": {
+    "collection": "free_documents",
+    "field": "service",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 1700,
+      "collection": "free_documents",
+      "field": "service",
+      "special": [
+        "m2a"
+      ],
+      "interface": "list-m2a",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": null,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "computed": {
+    "collection": "free_tham_dinh_danh_muc_tai_san",
+    "field": "computed",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 1501,
+      "collection": "free_tham_dinh_danh_muc_tai_san",
+      "field": "computed",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": null,
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 16,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "khach_hang_1": {
+    "collection": "free_tham_dinh_danh_muc_tai_san",
+    "field": "khach_hang_1",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 1514,
+      "collection": "free_tham_dinh_danh_muc_tai_san",
+      "field": "khach_hang_1",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": null,
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 13,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "khach_hang_2": {
+    "collection": "free_tham_dinh_danh_muc_tai_san",
+    "field": "khach_hang_2",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 1515,
+      "collection": "free_tham_dinh_danh_muc_tai_san",
+      "field": "khach_hang_2",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": null,
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 14,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "khach_hang_3": {
+    "collection": "free_tham_dinh_danh_muc_tai_san",
+    "field": "khach_hang_3",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 1516,
+      "collection": "free_tham_dinh_danh_muc_tai_san",
+      "field": "khach_hang_3",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": null,
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 15,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "ty_suat_sinh_loi": {
+    "collection": "free_tham_dinh_danh_muc_tai_san",
+    "field": "ty_suat_sinh_loi",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 1601,
+      "collection": "free_tham_dinh_danh_muc_tai_san",
+      "field": "ty_suat_sinh_loi",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": null,
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 17,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "danh_muc_phan_tich": {
+    "collection": "ho_so_phan_tich",
+    "field": "danh_muc_phan_tich",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 1650,
+      "collection": "ho_so_phan_tich",
+      "field": "danh_muc_phan_tich",
+      "special": [
+        "o2m"
+      ],
+      "interface": "list-o2m",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": null,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "cong_viec": {
+    "collection": "khach_hang",
+    "field": "cong_viec",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 40,
+      "collection": "khach_hang",
+      "field": "cong_viec",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": "group-detail",
+      "options": {
+        "start": "closed"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 23,
+      "width": "full",
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Công việc"
+        }
+      ],
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "muc_tieu_dau_tu": {
+    "collection": "khach_hang",
+    "field": "muc_tieu_dau_tu",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 50,
+      "collection": "khach_hang",
+      "field": "muc_tieu_dau_tu",
+      "special": [
+        "alias",
+        "no-data",
+        "group"
+      ],
+      "interface": "group-raw",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 1,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": "muc_tieu_tai_chinh",
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "muc_tieu_quan_ly_chi_tieu": {
+    "collection": "khach_hang",
+    "field": "muc_tieu_quan_ly_chi_tieu",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 51,
+      "collection": "khach_hang",
+      "field": "muc_tieu_quan_ly_chi_tieu",
+      "special": [
+        "alias",
+        "no-data",
+        "group"
+      ],
+      "interface": "group-raw",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 2,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": "muc_tieu_tai_chinh",
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "muc_tieu_bao_hiem": {
+    "collection": "khach_hang",
+    "field": "muc_tieu_bao_hiem",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 52,
+      "collection": "khach_hang",
+      "field": "muc_tieu_bao_hiem",
+      "special": [
+        "alias",
+        "no-data",
+        "group"
+      ],
+      "interface": "group-raw",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 3,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": "muc_tieu_tai_chinh",
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "muc_tieu_vay": {
+    "collection": "khach_hang",
+    "field": "muc_tieu_vay",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 62,
+      "collection": "khach_hang",
+      "field": "muc_tieu_vay",
+      "special": [
+        "alias",
+        "no-data",
+        "group"
+      ],
+      "interface": "group-raw",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 4,
+      "width": "full",
+      "translations": null,
+      "note": "Hưu trí",
+      "conditions": null,
+      "required": false,
+      "group": "muc_tieu_tai_chinh",
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "muc_tieu_huu_tri": {
+    "collection": "khach_hang",
+    "field": "muc_tieu_huu_tri",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 63,
+      "collection": "khach_hang",
+      "field": "muc_tieu_huu_tri",
+      "special": [
+        "alias",
+        "no-data",
+        "group"
+      ],
+      "interface": "group-raw",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 5,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": "muc_tieu_tai_chinh",
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "lien_he": {
+    "collection": "khach_hang",
+    "field": "lien_he",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 19,
+      "collection": "khach_hang",
+      "field": "lien_he",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": "group-detail",
+      "options": {
+        "start": "closed"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 22,
+      "width": "full",
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Liên hệ"
+        }
+      ],
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "nguoi_phu_thuoc": {
+    "collection": "khach_hang",
+    "field": "nguoi_phu_thuoc",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 34,
+      "collection": "khach_hang",
+      "field": "nguoi_phu_thuoc",
+      "special": [
+        "o2m"
+      ],
+      "interface": "list-o2m",
+      "options": {
+        "fields": [
+          "ten_nguoi_phu_thuoc",
+          "quan_he",
+          "ngay_sinh",
+          "phu_thuoc"
+        ],
+        "limit": 5,
+        "enableLink": true,
+        "enableSelect": false,
+        "layout": "table"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 9,
+      "width": "full",
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Người phụ thuộc"
+        }
+      ],
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": "thong_tin_khach_hang",
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "muc_tieu_nguoi_phu_thuoc": {
+    "collection": "khach_hang",
+    "field": "muc_tieu_nguoi_phu_thuoc",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 64,
+      "collection": "khach_hang",
+      "field": "muc_tieu_nguoi_phu_thuoc",
+      "special": [
+        "alias",
+        "no-data",
+        "group"
+      ],
+      "interface": "group-raw",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 6,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": "muc_tieu_tai_chinh",
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "muc_tieu_kinh_doanh_rieng": {
+    "collection": "khach_hang",
+    "field": "muc_tieu_kinh_doanh_rieng",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 65,
+      "collection": "khach_hang",
+      "field": "muc_tieu_kinh_doanh_rieng",
+      "special": [
+        "alias",
+        "no-data",
+        "group"
+      ],
+      "interface": "group-raw",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 7,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": "muc_tieu_tai_chinh",
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "muc_tieu_thue_tncn": {
+    "collection": "khach_hang",
+    "field": "muc_tieu_thue_tncn",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 66,
+      "collection": "khach_hang",
+      "field": "muc_tieu_thue_tncn",
+      "special": [
+        "alias",
+        "no-data",
+        "group"
+      ],
+      "interface": "group-raw",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 8,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": "muc_tieu_tai_chinh",
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "notice-cvgtwt": {
+    "collection": "khach_hang",
+    "field": "notice-cvgtwt",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 369,
+      "collection": "khach_hang",
+      "field": "notice-cvgtwt",
+      "special": [
+        "alias",
+        "no-data"
+      ],
+      "interface": "presentation-notice",
+      "options": {
+        "color": "warning",
+        "text": "**3. Nếu anh/chị không cần vốn trong hơn 5 năm, anh/chị sẽ sẵn sàng đợi bao lâu nếu thấy khoản đầu tư của mình có hiệu suất dưới mức mong đợi trước khi anh/chị rút tiền về?**</br> </br>- Anh/chị sẽ rút tiền về nếu có bất kỳ tổn thất nào về giá trị </br>- Dưới 6 tháng </br>- Dưới 1 năm </br>- Dưới 2 năm </br>- Dưới 3 năm </br>- Dưới 5 năm"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 8,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": "rui_ro_",
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "muc_tieu_tai_chinh": {
+    "collection": "khach_hang",
+    "field": "muc_tieu_tai_chinh",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 48,
+      "collection": "khach_hang",
+      "field": "muc_tieu_tai_chinh",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": "group-detail",
+      "options": {
+        "start": "closed"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 24,
+      "width": "full",
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Mục tiêu tài chính"
+        }
+      ],
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "no_phai_tra": {
+    "collection": "khach_hang",
+    "field": "no_phai_tra",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 109,
+      "collection": "khach_hang",
+      "field": "no_phai_tra",
+      "special": [
+        "o2m"
+      ],
+      "interface": "list-o2m",
+      "options": {
+        "layout": "table",
+        "fields": [
+          "loai_no",
+          "tan_suat_tra_no",
+          "tien_tra_no_dinh_ky"
+        ],
+        "limit": 5,
+        "enableSelect": false
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 1,
+      "width": "full",
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Nợ phải trả"
+        }
+      ],
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": "no",
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "tai_san_": {
+    "collection": "khach_hang",
+    "field": "tai_san_",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 159,
+      "collection": "khach_hang",
+      "field": "tai_san_",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": "group-detail",
+      "options": {
+        "start": "closed"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 27,
+      "width": "full",
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Tài sản"
+        }
+      ],
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "cong_viec_2": {
+    "collection": "khach_hang",
+    "field": "cong_viec_2",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 219,
+      "collection": "khach_hang",
+      "field": "cong_viec_2",
+      "special": [
+        "alias",
+        "no-data",
+        "group"
+      ],
+      "interface": "group-detail",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": true,
+      "sort": 9,
+      "width": "full",
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Công việc của Khách hàng 2"
+        }
+      ],
+      "note": null,
+      "conditions": [
+        {
+          "name": "Số lượng KH",
+          "rule": {
+            "_and": [
+              {
+                "so_luong_kh": {
+                  "_eq": true
+                }
+              }
+            ]
+          },
+          "hidden": false,
+          "options": {
+            "start": "open"
+          }
+        }
+      ],
+      "required": false,
+      "group": "cong_viec",
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "bao_hiem_": {
+    "collection": "khach_hang",
+    "field": "bao_hiem_",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 273,
+      "collection": "khach_hang",
+      "field": "bao_hiem_",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": "group-detail",
+      "options": {
+        "start": "closed"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 31,
+      "width": "full",
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Bảo hiểm"
+        }
+      ],
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "files_khach_hang": {
+    "collection": "khach_hang",
+    "field": "files_khach_hang",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 184,
+      "collection": "khach_hang",
+      "field": "files_khach_hang",
+      "special": [
+        "files"
+      ],
+      "interface": "files",
+      "options": {
+        "enableSelect": false,
+        "folder": null,
+        "limit": 5
+      },
+      "display": "raw",
+      "display_options": {
+        "template": null
+      },
+      "readonly": false,
+      "hidden": false,
+      "sort": 19,
+      "width": "full",
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Tài liệu liên quan đến Khách hàng"
+        },
+        {
+          "language": "vi-VN",
+          "translation": "Tài liệu liên quan đến Khách hàng"
+        }
+      ],
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "thong_tin_khach_hang_2": {
+    "collection": "khach_hang",
+    "field": "thong_tin_khach_hang_2",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 204,
+      "collection": "khach_hang",
+      "field": "thong_tin_khach_hang_2",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": "group-detail",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": true,
+      "sort": 8,
+      "width": "full",
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Thông tin của Khách hàng 2"
+        }
+      ],
+      "note": null,
+      "conditions": [
+        {
+          "name": "Số lượng KH",
+          "rule": {
+            "_and": [
+              {
+                "so_luong_kh": {
+                  "_eq": true
+                }
+              }
+            ]
+          },
+          "hidden": false,
+          "options": {}
+        }
+      ],
+      "required": false,
+      "group": "thong_tin_khach_hang",
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "suc_khoe_2": {
+    "collection": "khach_hang",
+    "field": "suc_khoe_2",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 319,
+      "collection": "khach_hang",
+      "field": "suc_khoe_2",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": "group-detail",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": true,
+      "sort": 7,
+      "width": "full",
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Tình trạng sức khoẻ của Khách hàng 2"
+        }
+      ],
+      "note": null,
+      "conditions": [
+        {
+          "name": "Số lượng KH",
+          "rule": {
+            "_and": [
+              {
+                "so_luong_kh": {
+                  "_eq": true
+                }
+              }
+            ]
+          },
+          "hidden": false,
+          "options": {
+            "start": "open"
+          }
+        }
+      ],
+      "required": false,
+      "group": "suc_khoe",
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "thua_ke_2": {
+    "collection": "khach_hang",
+    "field": "thua_ke_2",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 300,
+      "collection": "khach_hang",
+      "field": "thua_ke_2",
+      "special": [
+        "alias",
+        "no-data",
+        "group"
+      ],
+      "interface": "group-detail",
+      "options": {},
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": true,
+      "sort": 7,
+      "width": "full",
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Thừa kế của Khách hàng 2"
+        }
+      ],
+      "note": null,
+      "conditions": [
+        {
+          "name": "Số lượng KH",
+          "rule": {
+            "_and": [
+              {
+                "so_luong_kh": {
+                  "_eq": true
+                }
+              }
+            ]
+          },
+          "options": {
+            "start": "open"
+          },
+          "hidden": false
+        }
+      ],
+      "required": false,
+      "group": "thua_ke",
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "di_chuc_2": {
+    "collection": "khach_hang",
+    "field": "di_chuc_2",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 304,
+      "collection": "khach_hang",
+      "field": "di_chuc_2",
+      "special": [
+        "alias",
+        "no-data",
+        "group"
+      ],
+      "interface": "group-detail",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": true,
+      "sort": 4,
+      "width": "full",
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Di chúc của Khách hàng 2"
+        }
+      ],
+      "note": null,
+      "conditions": [
+        {
+          "name": "Số lượng KH",
+          "rule": {
+            "_and": [
+              {
+                "so_luong_kh": {
+                  "_eq": true
+                }
+              }
+            ]
+          },
+          "options": {
+            "start": "open"
+          },
+          "hidden": false
+        }
+      ],
+      "required": false,
+      "group": "di_chuc",
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "chi_tieu_": {
+    "collection": "khach_hang",
+    "field": "chi_tieu_",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 158,
+      "collection": "khach_hang",
+      "field": "chi_tieu_",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": "group-detail",
+      "options": {
+        "start": "closed"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 26,
+      "width": "full",
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Chi tiêu"
+        }
+      ],
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "notice-_dzsoy": {
+    "collection": "khach_hang",
+    "field": "notice-_dzsoy",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 276,
+      "collection": "khach_hang",
+      "field": "notice-_dzsoy",
+      "special": [
+        "alias",
+        "no-data"
+      ],
+      "interface": "presentation-notice",
+      "options": {
+        "color": "info",
+        "text": "Vui lòng cung cấp thông tin nếu HĐ BH của anh/chị có bất kì điều khoản loại trừ cho bệnh lý/ thương tật có sẵn nào."
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 3,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": "bao_hiem_",
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "notice-r92een": {
+    "collection": "khach_hang",
+    "field": "notice-r92een",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 264,
+      "collection": "khach_hang",
+      "field": "notice-r92een",
+      "special": [
+        "alias",
+        "no-data"
+      ],
+      "interface": "presentation-notice",
+      "options": {
+        "text": "**Mua sắm cá nhân theo nhu cầu cơ bản**: bao gồm quần áo, giầy dép, mỹ phẩm, nước hoa, phụ kiện cơ bản. Phần chi phí này chỉ nên tương đương từ 2% - 3% tổng thu nhập thực lãnh của khách hàng. <br/><br/> **Ăn ngoài**: gồm các bữa ăn với chi phí cao hơn từ 50% trở lên so với bữa ăn tiêu chuẩn thường ngày của gia đình (theo tiêu chuẩn thu nhập). <br/><br/> **Mua sắm cá nhân hơn nhu cầu cơ bản**: phần giá trị vượt trội so với nhu cầu cơ bản được định nghĩa trong phần Ghi chú liên quan. ",
+        "color": "info"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 2,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": "chi_tieu_",
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "suc_khoe": {
+    "collection": "khach_hang",
+    "field": "suc_khoe",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 306,
+      "collection": "khach_hang",
+      "field": "suc_khoe",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": "group-detail",
+      "options": {
+        "start": "closed"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 32,
+      "width": "full",
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Tình trạng sức khỏe"
+        }
+      ],
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "notice-2zzohh": {
+    "collection": "khach_hang",
+    "field": "notice-2zzohh",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 373,
+      "collection": "khach_hang",
+      "field": "notice-2zzohh",
+      "special": [
+        "alias",
+        "no-data"
+      ],
+      "interface": "presentation-notice",
+      "options": {
+        "color": "warning",
+        "text": "**7. Tính ổn định trong tổng thu nhập của gia đình anh/chị? (Phần này FIDT sẽ cùng đánh giá với KH)**</br> </br>- Rất ổn định với dự kiến tăng trưởng đều quanh 10%/năm và dễ dàng kiếm việc thay thế với thu nhập tương đương. Tuổi nghề kéo dài với thu nhập không suy giảm </br>- Rất ổn định với dự kiến tăng trưởng đều quanh 5%/năm và dễ dàng kiếm việc thay thế với thu nhập tương đương. Tuổi nghề không đảm bảo khi trên 50 tuổi </br>- Rất ổn định với dự kiến tăng trưởng đều quanh 5%/năm, tuy nhiên không dễ để tìm ngay công việc tương đương thu nhập. </br>- Thu nhập không ổn định do tính chất công việc, tuy nhiên 80% thu nhập vẫn có thể tăng trưởng quanh 5%/năm </br>- Thu nhập bị giới hạn khi tới một chức vụ hay mức lương nhất định </br>- Kinh nghiệm công việc chưa nhiều nên thu nhập không ổn định và chưa chắc chắn cho sự tăng trưởng Hằng năm"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 20,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": "rui_ro_",
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "notice-iydc9e": {
+    "collection": "khach_hang",
+    "field": "notice-iydc9e",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 328,
+      "collection": "khach_hang",
+      "field": "notice-iydc9e",
+      "special": [
+        "alias",
+        "no-data"
+      ],
+      "interface": "presentation-notice",
+      "options": {
+        "color": "warning",
+        "text": "**1. Điều nào sau đây mô tả đúng nhất về giai đoạn hiện tại của cuộc đời anh/chị?**</br> </br>- **Độc thân với ít ràng buộc tài chính.** Anh/chị đang muốn tích lũy tài sản cho tương lai. Một số tiền trong tài khoản phải luôn sẵn sàng để sử dụng cho các nhu cầu tiêu dùng như xe hơi, quần áo, du lịch và giải trí. </br>- **Một cặp vợ chồng chưa có con.** Anh/chị có thể đang chuẩn bị cho tương lai bằng cách xây dựng và trang bị cho một ngôi nhà. Có rất nhiều thứ anh/chị cần mua. Hiện tại anh/chị có thể khá giả hơn về mặt tài chính so với tương lai. </br>- **Gia đình trẻ.** Nhiều khả năng đây là giai đoạn mua nhà. Anh/chị có một khoản thế chấp và một số tiền tiết kiệm rất nhỏ. Có thể anh/chị không hài lòng với tình hình tài chính hiện tại và số tiền tiết kiệm được. </br>- **Gia đình lâu năm.** Anh/chị đang ở trong những năm thu nhập cao nhất và phải kiểm soát thế chấp nếu có. Anh/chị có thể sở hữu doanh nghiệp riêng, con cái đã lớn và cần ít sự giám sát hơn. Anh/chị đang bắt đầu nghĩ đến việc nghỉ hưu, mặc dù có thể còn nhiều năm nữa mới đến tuổi hưu. </br>- **Chuẩn bị nghỉ hưu.** Anh/chị có thể sở hữu nhà riêng của mình và có ít rang buộc tài chính; tuy nhiên, anh/chị muốn đảm bảo rằng anh/chị có thể đủ khả năng để nghỉ hưu thoải mái. Quan tâm đến du lịch, giải trí và tự giáo dục </br>- **Đã nghỉ hưu.** Không còn làm việc và phải dựa vào các quỹ và đầu tư hiện có để duy trì lối sống của anh/chị. Anh/chị có thể đang nhận lương hưu và muốn tận hưởng cuộc sống và duy trì sức khỏe của mình."
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 2,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": "rui_ro_",
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "notice-bjuace": {
+    "collection": "khach_hang",
+    "field": "notice-bjuace",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 372,
+      "collection": "khach_hang",
+      "field": "notice-bjuace",
+      "special": [
+        "alias",
+        "no-data"
+      ],
+      "interface": "presentation-notice",
+      "options": {
+        "color": "warning",
+        "text": "**6. Điều nào sau đây mô tả chính xác nhất mục đích đầu tư của anh/ chị?**</br> </br>- Anh/chị muốn đầu tư lâu hơn 5 năm, có thể là đến 55–60 tuổi. Anh/chị chủ yếu đầu tư cho tăng trưởng để tích lũy tài sản dài hạn </br>- Anh/chị còn xa tuổi về hưu, có dư tiền để đầu tư và anh/chị đang muốn tích lũy tài sản lâu dài trong một quỹ cân bằng </br>- Anh/chị có một khoản tiền lớn, ví dụ: tài sản thừa kế hoặc khoản bồi thường và anh/chị không chắc chắn về những lựa chọn đầu tư an toàn nào đang có trên thị trường </br>- Anh/chị sắp nghỉ hưu và anh/chị đang đầu tư để đảm bảo rằng anh/chị có đủ tiền để được nghỉ hưu </br>- Anh/chị có một số mục tiêu rất quan trọng trong vòng năm năm tới mà anh/chị muốn ưu tiên tiết kiệm đủ tiền  </br>- Anh/chị muốn có thu nhập đều đặn và / hoặc bảo vệ hoàn toàn giá trị khoản tiết kiệm của mình"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 17,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": "rui_ro_",
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "notice-mw1wnh": {
+    "collection": "khach_hang",
+    "field": "notice-mw1wnh",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 371,
+      "collection": "khach_hang",
+      "field": "notice-mw1wnh",
+      "special": [
+        "alias",
+        "no-data"
+      ],
+      "interface": "presentation-notice",
+      "options": {
+        "color": "warning",
+        "text": "**5. Sáu tháng sau khi mở tài khoản đầu tư, anh/chị phát hiện ra rằng danh mục đầu tư của mình đã giảm 20% giá trị. Phản ứng của anh/chị sẽ như thế nào?**</br> </br>- Sợ hãi. Đối với anh/chị bảo toàn vốn là quan trọng và anh/chị không có ý định chấp nhận rủi ro </br>- Anh/chị sẽ cắt lỗ và chuyển tiền của mình vào các lĩnh vực đầu tư an toàn hơn </br>- Anh/chị sẽ lo lắng, nhưng sẽ chờ xem liệu các khoản đầu tư có cải thiện hay không </br>- Đây là một rủi ro đã được tính toán và anh/chị sẽ để nguyên các khoản đầu tư, hy vọng hiệu suất sẽ cải thiện </br>- Anh/chị sẽ đầu tư nhiều tiền hơn để giảm giá đầu tư trung bình của mình, kỳ vọng tăng trưởng trong tương lai"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 14,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": "rui_ro_",
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "notice-pu0vrv": {
+    "collection": "khach_hang",
+    "field": "notice-pu0vrv",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 368,
+      "collection": "khach_hang",
+      "field": "notice-pu0vrv",
+      "special": [
+        "alias",
+        "no-data"
+      ],
+      "interface": "presentation-notice",
+      "options": {
+        "color": "warning",
+        "text": "**2. Anh/chị kỳ vọng đạt được lợi nhuận hợp lý nào từ các khoản đầu tư của mình?**</br> </br>- Có lợi nhuận nhưng không bị mất vốn </br>- 3–7% một năm </br>- 8–15% một năm </br>- 15–20% một năm </br>- Hơn 20% một năm"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 5,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": "rui_ro_",
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "notice-swhxiy": {
+    "collection": "khach_hang",
+    "field": "notice-swhxiy",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 370,
+      "collection": "khach_hang",
+      "field": "notice-swhxiy",
+      "special": [
+        "alias",
+        "no-data"
+      ],
+      "interface": "presentation-notice",
+      "options": {
+        "color": "warning",
+        "text": "**4. Mức độ hiều biết của anh/chị với các thị trường đầu tư?**</br> </br>- Rất ít hiểu biết hoặc quan tâm </br>- Không biết nhiều lắm </br>- Có đủ kinh nghiệm để hiểu tầm quan trọng của đa dạng hóa đầu tư </br>- Hiểu rằng thị trường có thể biến động và các lĩnh vực khác nhau sẽ cho các kiểu sinh lợi, tăng trưởng và thuế khác nhau </br>- Có kinh nghiệm với tất cả các lĩnh vực đầu tư và hiểu các yếu tố khác nhau có thể ảnh hưởng đến hiệu suất đầu tư"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 11,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": "rui_ro_",
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "export": {
+    "collection": "khach_hang",
+    "field": "export",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 427,
+      "collection": "khach_hang",
+      "field": "export",
+      "special": [
+        "alias",
+        "no-data"
+      ],
+      "interface": "export-infor",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 35,
+      "width": "full",
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Xuất thông tin khách hàng"
+        }
+      ],
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "thong_tin_hop_dong": {
+    "collection": "khach_hang",
+    "field": "thong_tin_hop_dong",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 423,
+      "collection": "khach_hang",
+      "field": "thong_tin_hop_dong",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": "group-raw",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 16,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": [
+        {
+          "name": "Loại khách hàng là Tư vấn theo nhu cầu",
+          "rule": {
+            "_and": [
+              {
+                "loai_khach_hang": {
+                  "_eq": "Tư vấn theo nhu cầu"
+                }
+              }
+            ]
+          },
+          "hidden": true,
+          "options": {}
+        }
+      ],
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "di_chuc": {
+    "collection": "khach_hang",
+    "field": "di_chuc",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 133,
+      "collection": "khach_hang",
+      "field": "di_chuc",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": "group-detail",
+      "options": {
+        "start": "closed"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 30,
+      "width": "full",
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Di chúc"
+        }
+      ],
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "rui_ro_": {
+    "collection": "khach_hang",
+    "field": "rui_ro_",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 366,
+      "collection": "khach_hang",
+      "field": "rui_ro_",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": "group-detail",
+      "options": {
+        "start": "closed"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 33,
+      "width": "full",
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Khả năng chịu rủi ro trong đầu tư"
+        }
+      ],
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "thong_tin_dau_tu": {
+    "collection": "khach_hang",
+    "field": "thong_tin_dau_tu",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 422,
+      "collection": "khach_hang",
+      "field": "thong_tin_dau_tu",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": "group-raw",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": true,
+      "sort": 17,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": [
+        {
+          "name": "Loại KH là Tư vấn đầu tư",
+          "rule": {
+            "_and": [
+              {
+                "loai_khach_hang": {
+                  "_eq": "Tư vấn đầu tư"
+                }
+              }
+            ]
+          },
+          "options": {},
+          "hidden": false
+        }
+      ],
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "thu_nhap_": {
+    "collection": "khach_hang",
+    "field": "thu_nhap_",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 180,
+      "collection": "khach_hang",
+      "field": "thu_nhap_",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": "group-detail",
+      "options": {
+        "start": "closed"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 25,
+      "width": "full",
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Thu nhập"
+        }
+      ],
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "thua_ke": {
+    "collection": "khach_hang",
+    "field": "thua_ke",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 123,
+      "collection": "khach_hang",
+      "field": "thua_ke",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": "group-detail",
+      "options": {
+        "start": "closed"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 29,
+      "width": "full",
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Thừa kế"
+        }
+      ],
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "lien_he_2": {
+    "collection": "khach_hang",
+    "field": "lien_he_2",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 210,
+      "collection": "khach_hang",
+      "field": "lien_he_2",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": "group-detail",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": true,
+      "sort": 6,
+      "width": "full",
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Liên hệ của Khách hàng 2"
+        }
+      ],
+      "note": null,
+      "conditions": [
+        {
+          "name": "Số lượng KH",
+          "rule": {
+            "_and": [
+              {
+                "so_luong_kh": {
+                  "_eq": true
+                }
+              }
+            ]
+          },
+          "hidden": false,
+          "options": {}
+        }
+      ],
+      "required": false,
+      "group": "lien_he",
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "thong_tin_khach_hang": {
+    "collection": "khach_hang",
+    "field": "thong_tin_khach_hang",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 179,
+      "collection": "khach_hang",
+      "field": "thong_tin_khach_hang",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": "group-detail",
+      "options": {
+        "start": "closed"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 21,
+      "width": "full",
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Thông tin Khách hàng"
+        }
+      ],
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "assumptions": {
+    "collection": "kich_ban_dong_tien",
+    "field": "assumptions",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 1069,
+      "collection": "kich_ban_dong_tien",
+      "field": "assumptions",
+      "special": [
+        "m2m"
+      ],
+      "interface": "list-m2m",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 11,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "transactions": {
+    "collection": "kich_ban_dong_tien",
+    "field": "transactions",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 1312,
+      "collection": "kich_ban_dong_tien",
+      "field": "transactions",
+      "special": [
+        "m2a"
+      ],
+      "interface": "list-m2a",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": null,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "thay_the_thu_nhap_ntc": {
+    "collection": "kich_ban_phan_tich_ncbh",
+    "field": "thay_the_thu_nhap_ntc",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 1627,
+      "collection": "kich_ban_phan_tich_ncbh",
+      "field": "thay_the_thu_nhap_ntc",
+      "special": [
+        "m2m"
+      ],
+      "interface": "list-m2m",
+      "options": {
+        "layout": "table"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": null,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "directus_roles": {
+    "collection": "pbi_dashboard",
+    "field": "directus_roles",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 430,
+      "collection": "pbi_dashboard",
+      "field": "directus_roles",
+      "special": [
+        "m2m"
+      ],
+      "interface": "list-m2m",
+      "options": {
+        "template": "{{directus_roles_id.name}}"
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 6,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "pbi_filter_rules": {
+    "collection": "pbi_dashboard",
+    "field": "pbi_filter_rules",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 1732,
+      "collection": "pbi_dashboard",
+      "field": "pbi_filter_rules",
+      "special": [
+        "o2m"
+      ],
+      "interface": "list-o2m",
+      "options": {
+        "template": "Table: {{table}}; Column: {{column}}; Operator: {{operator}}; Values: {{values}}"
+      },
+      "display": "related-values",
+      "display_options": {
+        "template": "Table:{{table}}; Column:{{column}}; Operator:{{operator}}; Values:{{values}}"
+      },
+      "readonly": false,
+      "hidden": false,
+      "sort": 5,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "kh_1": {
+    "collection": "phan_tich_nhu_cau",
+    "field": "kh_1",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 780,
+      "collection": "phan_tich_nhu_cau",
+      "field": "kh_1",
+      "special": [
+        "m2m"
+      ],
+      "interface": "list-m2m",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": null,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "kh_2": {
+    "collection": "phan_tich_nhu_cau",
+    "field": "kh_2",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 781,
+      "collection": "phan_tich_nhu_cau",
+      "field": "kh_2",
+      "special": [
+        "m2m"
+      ],
+      "interface": "list-m2m",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": null,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "assets": {
+    "collection": "profile",
+    "field": "assets",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 1147,
+      "collection": "profile",
+      "field": "assets",
+      "special": [
+        "m2a"
+      ],
+      "interface": "list-m2a",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 22,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "cash_flow_analysis_scenarios": {
+    "collection": "profile",
+    "field": "cash_flow_analysis_scenarios",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 1148,
+      "collection": "profile",
+      "field": "cash_flow_analysis_scenarios",
+      "special": [
+        "m2m"
+      ],
+      "interface": "list-m2m",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 26,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "debt": {
+    "collection": "profile",
+    "field": "debt",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 1153,
+      "collection": "profile",
+      "field": "debt",
+      "special": [
+        "m2m"
+      ],
+      "interface": "list-m2m",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 23,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "expenses": {
+    "collection": "profile",
+    "field": "expenses",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 1156,
+      "collection": "profile",
+      "field": "expenses",
+      "special": [
+        "m2m"
+      ],
+      "interface": "list-m2m",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 25,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "income": {
+    "collection": "profile",
+    "field": "income",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 1160,
+      "collection": "profile",
+      "field": "income",
+      "special": [
+        "m2m"
+      ],
+      "interface": "list-m2m",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 24,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "insurance": {
+    "collection": "profile",
+    "field": "insurance",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 1163,
+      "collection": "profile",
+      "field": "insurance",
+      "special": [
+        "m2a"
+      ],
+      "interface": "list-m2a",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 28,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "insurance_needs_analysis_scenarios": {
+    "collection": "profile",
+    "field": "insurance_needs_analysis_scenarios",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 1164,
+      "collection": "profile",
+      "field": "insurance_needs_analysis_scenarios",
+      "special": [
+        "m2m"
+      ],
+      "interface": "list-m2m",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 27,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "linked_contracts": {
+    "collection": "profile",
+    "field": "linked_contracts",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 1166,
+      "collection": "profile",
+      "field": "linked_contracts",
+      "special": [
+        "m2m"
+      ],
+      "interface": "list-m2m",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 32,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "related_documents": {
+    "collection": "profile",
+    "field": "related_documents",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 1380,
+      "collection": "profile",
+      "field": "related_documents",
+      "special": [
+        "m2m"
+      ],
+      "interface": "list-m2m",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 35,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "khau_vi_rui_ro": {
+    "collection": "profile",
+    "field": "khau_vi_rui_ro",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 1767,
+      "collection": "profile",
+      "field": "khau_vi_rui_ro",
+      "special": [
+        "o2m"
+      ],
+      "interface": "list-o2m",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": null,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "quyen_loi_ngoai_tru": {
+    "collection": "quyen_loi_bhsk",
+    "field": "quyen_loi_ngoai_tru",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 1427,
+      "collection": "quyen_loi_bhsk",
+      "field": "quyen_loi_ngoai_tru",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": null,
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 8,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "quyen_loi_nha_khoa": {
+    "collection": "quyen_loi_bhsk",
+    "field": "quyen_loi_nha_khoa",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 1428,
+      "collection": "quyen_loi_bhsk",
+      "field": "quyen_loi_nha_khoa",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": null,
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 10,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "quyen_loi_thai_san": {
+    "collection": "quyen_loi_bhsk",
+    "field": "quyen_loi_thai_san",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 1429,
+      "collection": "quyen_loi_bhsk",
+      "field": "quyen_loi_thai_san",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": null,
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 9,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "permissions": {
+    "collection": "role",
+    "field": "permissions",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 984,
+      "collection": "role",
+      "field": "permissions",
+      "special": [
+        "m2m"
+      ],
+      "interface": "list-m2m",
+      "options": {
+        "template": "{{permission_id.description}}"
+      },
+      "display": "related-values",
+      "display_options": {
+        "template": "{{permission_id.description}}"
+      },
+      "readonly": false,
+      "hidden": false,
+      "sort": 5,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "users": {
+    "collection": "role_mapping",
+    "field": "users",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 987,
+      "collection": "role_mapping",
+      "field": "users",
+      "special": [
+        "m2m"
+      ],
+      "interface": "list-m2m",
+      "options": {
+        "template": "{{directus_users_id.first_name}} {{directus_users_id.last_name}}"
+      },
+      "display": "related-values",
+      "display_options": {
+        "template": "{{directus_users_id.first_name}} {{directus_users_id.last_name}}"
+      },
+      "readonly": false,
+      "hidden": false,
+      "sort": null,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "bds": {
+    "collection": "tai_san",
+    "field": "bds",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 111,
+      "collection": "tai_san",
+      "field": "bds",
+      "special": [
+        "alias",
+        "no-data",
+        "group"
+      ],
+      "interface": "group-detail",
+      "options": {},
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": true,
+      "sort": 12,
+      "width": "full",
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Thông tin Bất động sản"
+        }
+      ],
+      "note": null,
+      "conditions": [
+        {
+          "name": "Thông tin Bất động sản",
+          "rule": {
+            "_and": [
+              {
+                "loai_tai_san": {
+                  "_eq": "Bất động sản"
+                }
+              }
+            ]
+          },
+          "hidden": false,
+          "options": {
+            "start": "open"
+          }
+        }
+      ],
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "planner": {
+    "collection": "to_tu_van",
+    "field": "planner",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 343,
+      "collection": "to_tu_van",
+      "field": "planner",
+      "special": [
+        "m2m"
+      ],
+      "interface": "list-m2m",
+      "options": {
+        "enableCreate": false,
+        "limit": 10
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": null,
+      "width": "full",
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Người tư vấn"
+        }
+      ],
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "cho_tang_thua_ke": {
+    "collection": "trai_phieu",
+    "field": "cho_tang_thua_ke",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 640,
+      "collection": "trai_phieu",
+      "field": "cho_tang_thua_ke",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": "group-detail",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 27,
+      "width": "full",
+      "translations": [
+        {
+          "language": "en-US",
+          "translation": "Cho tặng/Thừa kế"
+        }
+      ],
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "gan_voi_tai_san": {
+    "collection": "w_thu_nhap",
+    "field": "gan_voi_tai_san",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 818,
+      "collection": "w_thu_nhap",
+      "field": "gan_voi_tai_san",
+      "special": [
+        "m2a"
+      ],
+      "interface": "list-m2a",
+      "options": {
+        "enableCreate": false
+      },
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 2,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": "thu_nhap_gan_voi_tai_san",
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "chi_tieu_gan_voi_khoan_vay": {
+    "collection": "w_chi_tieu",
+    "field": "chi_tieu_gan_voi_khoan_vay",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 790,
+      "collection": "w_chi_tieu",
+      "field": "chi_tieu_gan_voi_khoan_vay",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": "group-raw",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 18,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "chi_tieu_gan_voi_tai_san": {
+    "collection": "w_chi_tieu",
+    "field": "chi_tieu_gan_voi_tai_san",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 791,
+      "collection": "w_chi_tieu",
+      "field": "chi_tieu_gan_voi_tai_san",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": "group-raw",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 17,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "thoi_han_chi_tieu": {
+    "collection": "w_chi_tieu",
+    "field": "thoi_han_chi_tieu",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 809,
+      "collection": "w_chi_tieu",
+      "field": "thoi_han_chi_tieu",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": "group-raw",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 16,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "deals": {
+    "collection": "w_khach_hang",
+    "field": "deals",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 954,
+      "collection": "w_khach_hang",
+      "field": "deals",
+      "special": [
+        "o2m"
+      ],
+      "interface": "list-o2m",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": null,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "thoi_han_thu_nhap": {
+    "collection": "w_thu_nhap",
+    "field": "thoi_han_thu_nhap",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 833,
+      "collection": "w_thu_nhap",
+      "field": "thoi_han_thu_nhap",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": "group-raw",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 15,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "muc_tang_thu_nhap": {
+    "collection": "w_thu_nhap",
+    "field": "muc_tang_thu_nhap",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 825,
+      "collection": "w_thu_nhap",
+      "field": "muc_tang_thu_nhap",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": "group-raw",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 16,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  },
+  "thu_nhap_gan_voi_tai_san": {
+    "collection": "w_thu_nhap",
+    "field": "thu_nhap_gan_voi_tai_san",
+    "type": "alias",
+    "schema": null,
+    "meta": {
+      "id": 836,
+      "collection": "w_thu_nhap",
+      "field": "thu_nhap_gan_voi_tai_san",
+      "special": [
+        "alias",
+        "group",
+        "no-data"
+      ],
+      "interface": "group-raw",
+      "options": null,
+      "display": null,
+      "display_options": null,
+      "readonly": false,
+      "hidden": false,
+      "sort": 17,
+      "width": "full",
+      "translations": null,
+      "note": null,
+      "conditions": null,
+      "required": false,
+      "group": null,
+      "validation": null,
+      "validation_message": null
+    }
+  }
+}
