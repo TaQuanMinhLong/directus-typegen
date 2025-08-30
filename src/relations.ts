@@ -270,6 +270,7 @@ export class Relations {
         ),
       );
     }
+    return this;
   }
 
   applyToSchema(schema: Schema) {

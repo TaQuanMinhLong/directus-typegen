@@ -124,16 +124,22 @@ export class Schema {
     return schema;
   }
 
-  generate(name = "DatabaseSchema", _export = true) {
+  generate(options: Omit<SchemaGenerateOptions, "outFile">) {
+    const {
+      schemaName = "DatabaseSchema",
+      export: _export = true,
+      directusSdkImports = [],
+    } = options;
     const lines: string[] = [];
     lines.push("// Auto-generated. Do not edit manually.\n");
-    // TODO: Make option to config directus sdk import
-    lines.push(
-      `import type { DirectusFile, DirectusRole, DirectusUser } from "@directus/sdk";\n`,
-    );
+
+    directusSdkImports.length > 0 &&
+      lines.push(
+        `import type { ${directusSdkImports.join(", ")} } from "@directus/sdk";\n`,
+      );
 
     // DatabaseSchema interface
-    lines.push(`${_export ? "export " : ""}interface ${name} {`);
+    lines.push(`${_export ? "export " : ""}interface ${schemaName} {`);
     for (const [collectionName, typeName] of this.collections) {
       lines.push(`  ${collectionName}: ${typeName}[];`);
     }
@@ -144,7 +150,7 @@ export class Schema {
       const collection = this.schema[collectionName];
       if (!collection) continue;
 
-      lines.push(`interface ${typeName} {`);
+      lines.push(`${_export ? "export " : ""}interface ${typeName} {`);
 
       // Primary key field
       if (collection.primaryKey) {
@@ -174,3 +180,30 @@ export class Schema {
 
 type CollectionName = string;
 type CollectionTypeName = string;
+
+export type SchemaGenerateOptions = {
+  /**
+   * The name of the schema interface.
+   *
+   * @default "DatabaseSchema"
+   */
+  schemaName?: string;
+  /**
+   * Whether to export the schema interface.
+   *
+   * @default true
+   */
+  export?: boolean;
+  /**
+   * The Directus SDK imports to include in the generated types.
+   *
+   * @default []
+   */
+  directusSdkImports?: string[];
+  /**
+   * The file to write the generated types to.
+   *
+   * @default "${process.cwd()}/types.generated.ts"
+   */
+  outFile?: string;
+};

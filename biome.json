@@ -25,6 +25,11 @@
             "style": "separatedType"
           }
         },
+        "useTemplate": {
+          "fix": "safe",
+          "level": "info",
+          "options": {}
+        },
         "noNonNullAssertion": "off"
       },
       "suspicious": {
