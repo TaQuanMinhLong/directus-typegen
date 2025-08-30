@@ -12,9 +12,10 @@ import { Timer } from "./utils";
  */
 export default async function generateTypes({
   outFile,
+  enableTimer,
   ...options
 }: SchemaGenerateOptions) {
-  const timer = new Timer();
+  const timer = new Timer(enableTimer);
   timer.start();
   const [schema, relations] = await Promise.all([
     Schema.init(directus),

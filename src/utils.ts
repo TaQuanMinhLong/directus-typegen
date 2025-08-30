@@ -78,13 +78,20 @@ export type TypescriptFieldType =
   | (string & {});
 
 export class Timer {
+  enabled: boolean;
   private startTime: [number, number] | null = null;
 
+  constructor(enabled?: boolean) {
+    this.enabled = enabled ?? process.env.NODE_ENV !== "test";
+  }
+
   start(): void {
+    if (!this.enabled) return;
     this.startTime = process.hrtime();
   }
 
   end(): void {
+    if (!this.enabled) return;
     if (!this.startTime) {
       throw new Error("Timer was not started. Call start() before end().");
     }
@@ -93,16 +100,13 @@ export class Timer {
     const totalMs = end[0] * 1000 + end[1] / 1000000;
 
     // Display in milliseconds if less than 1 second, otherwise in seconds
-    if (process.env.NODE_ENV !== "test") {
-      // We don't need to log in test environment
-      // as test already log the time
-      if (totalMs < 1000) {
-        console.log(`Generated types in ${totalMs.toFixed(2)}ms`);
-      } else {
-        console.log(`Generated types in ${(totalMs / 1000).toFixed(2)}s`);
-      }
+    // We don't need to log in test environment
+    // as test already log the time
+    if (totalMs < 1000) {
+      console.log(`✅️ Generated types in ${totalMs.toFixed(2)}ms`);
+    } else {
+      console.log(`✅️ Generated types in ${(totalMs / 1000).toFixed(2)}s`);
     }
-
     this.startTime = null;
   }
 }

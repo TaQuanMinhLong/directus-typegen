@@ -124,7 +124,7 @@ export class Schema {
     return schema;
   }
 
-  generate(options: Omit<SchemaGenerateOptions, "outFile">) {
+  generate(options: Omit<SchemaGenerateOptions, "outFile" | "enableTimer">) {
     const {
       schemaName = "DatabaseSchema",
       export: _export = true,
@@ -206,4 +206,10 @@ export type SchemaGenerateOptions = {
    * @default "${process.cwd()}/types.generated.ts"
    */
   outFile?: string;
+  /**
+   * Whether to enable the timer.
+   *
+   * @default true
+   */
+  enableTimer?: boolean;
 };
