@@ -8,6 +8,9 @@
   },
   "private": true,
   "type": "module",
+  "scripts": {
+    "start": "bun run src/index.ts"
+  },
   "dependencies": {
     "@directus/sdk": "^20.0.3"
   }
