@@ -1,5 +1,5 @@
-import generateTypes from "~/typegen";
+import generate from "~/typegen";
 
-await generateTypes({
+await generate({
   directusSdkImports: ["DirectusFile", "DirectusRole", "DirectusUser"],
 });

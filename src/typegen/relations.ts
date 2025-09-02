@@ -27,11 +27,17 @@ class M20Field implements RelationalField {
 
     const targetCollection = schema.getOrInitCollection(this.targetCollection);
     if (targetCollection.primaryKeyType) {
-      field.addTypes(targetCollection.primaryKeyType);
+      field.addTypes(
+        targetCollection.primaryKeyType,
+        toInterfaceName(this.targetCollection),
+      );
     }
     targetCollection
       .getField(this.field)
-      ?.addTypes(`${toInterfaceName(this.collection)}[]`);
+      ?.addTypes(
+        `${toInterfaceName(this.collection)}[]`,
+        collection.primaryKeyType!,
+      );
   }
 }
 

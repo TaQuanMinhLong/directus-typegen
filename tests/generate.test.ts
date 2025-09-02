@@ -2,7 +2,7 @@ import { expect, test } from "bun:test";
 import typescript from "typescript";
 import generate from "~/typegen";
 
-test("generate", async () => {
+test.skipIf(!process.env.TEST_GENERATE)("generate", async () => {
   const outFile = await generate({
     directusSdkImports: ["DirectusFile", "DirectusRole", "DirectusUser"],
   });

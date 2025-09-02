@@ -10,7 +10,7 @@ import { Timer } from "./utils";
  * @param options - The options for generating types.
  * @returns The path to the generated types file.
  */
-export default async function generateTypes({
+export default async function generate({
   outFile,
   enableTimer,
   ...options
