@@ -1,6 +1,6 @@
 import type { DirectusRelation } from "@directus/sdk";
 import { readRelations } from "@directus/sdk";
-import type { Directus } from "./directus";
+import type { Directus } from "../directus";
 import type { Schema } from "./schema";
 import { quoted, toInterfaceName, toTypescriptType } from "./utils";
 

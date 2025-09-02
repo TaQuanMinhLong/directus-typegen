@@ -1,6 +1,6 @@
 import type { DirectusCollection, DirectusField } from "@directus/sdk";
 import { readCollections, readFieldsByCollection } from "@directus/sdk";
-import type { Directus } from "./directus";
+import type { Directus } from "../directus";
 import type { TypescriptFieldType } from "./utils";
 import { toInterfaceName, toTypescriptType } from "./utils";
 

@@ -1,10 +1,9 @@
 {
-  "name": "@fidt/directus-typegen",
-  "module": "src/index.ts",
+  "name": "@fidt/directus-utils",
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "bun run src/index.ts",
+    "typegen": "bun run bin/typegen.ts",
     "test": "bun test"
   },
   "dependencies": {
@@ -16,6 +15,10 @@
     "typescript": "^5.9.2"
   },
   "exports": {
+    "./typegen": "./src/typegen/index.ts",
     ".": "./src/index.ts"
+  },
+  "bin": {
+    "typegen": "./bin/typegen.ts"
   }
 }
