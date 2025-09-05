@@ -2,7 +2,7 @@ import type { DirectusCollection, DirectusField } from "@directus/sdk";
 import { readCollections, readFieldsByCollection } from "@directus/sdk";
 import type { Directus } from "../directus";
 import type { TypescriptFieldType } from "./utils";
-import { toInterfaceName, toTypescriptType } from "./utils";
+import { DEFAULT_TYPES, toInterfaceName, toTypescriptType } from "./utils";
 
 export class Field {
   name: string;
@@ -14,12 +14,19 @@ export class Field {
 
   addTypes(...types: TypescriptFieldType[]) {
     for (const type of types) this.types.add(type);
+    return this;
+  }
+
+  removeTypes(...types: TypescriptFieldType[]) {
+    for (const type of types) this.types.delete(type);
+    return this;
   }
 }
 
 export class Collection {
   name: string;
   primaryKey: string | undefined;
+  singleton = false;
   fields = new Map<string, Field>();
 
   _primaryKeyType: TypescriptFieldType | null = null;
@@ -41,7 +48,10 @@ export class Collection {
     return this.fields.get(name);
   }
 
-  get primaryKeyType() {
+  /**
+   * The type of the primary key.
+   */
+  get pkType() {
     if (this.name.startsWith("directus_")) {
       this._primaryKeyType = "string";
       return this._primaryKeyType;
@@ -62,11 +72,7 @@ export class Schema {
     special: string[] | null | undefined,
   ): special is ["m2a" | "m2m" | "o2m"] {
     if (!special) return false;
-    return (
-      special.includes("m2a") ||
-      special.includes("m2m") ||
-      special.includes("o2m")
-    );
+    return special.includes("m2a") || special.includes("m2m") || special.includes("o2m");
   }
 
   getOrInitCollection(name: string) {
@@ -80,33 +86,25 @@ export class Schema {
     const schema = new Schema();
     const collectionResponse = await directus.request(readCollections());
     const promises = [] as Promise<any>[];
+    // const debugFields = [] as any[];
 
     for (const collection of collectionResponse as DirectusCollection[]) {
       if (collection.collection.startsWith("directus_")) continue;
       if (!collection.schema?.name) continue;
-      schema.collections.set(
-        collection.collection,
-        toInterfaceName(collection.collection),
-      );
+      schema.collections.set(collection.collection, toInterfaceName(collection.collection));
       promises.push(
         (async () => {
-          const collectionSchema = schema.getOrInitCollection(
-            collection.collection,
-          );
-          const fields = await directus.request(
-            readFieldsByCollection(collection.collection),
-          );
-
+          const collectionSchema = schema.getOrInitCollection(collection.collection);
+          if (collection.meta.singleton) collectionSchema.singleton = true;
+          const fields = await directus.request(readFieldsByCollection(collection.collection));
+          // debugFields.push(...fields);
           for (const field of fields as DirectusField[]) {
             const schemaField = collectionSchema.getOrInitField(field.field);
-            field.schema?.is_primary_key &&
-              collectionSchema.setPrimaryKey(field.field);
+            field.schema?.is_primary_key && collectionSchema.setPrimaryKey(field.field);
 
             if (!field.schema?.data_type) {
               if (Schema.isRelationalAlias(field.meta.special)) {
-                schema
-                  .getOrInitCollection(collection.collection)
-                  .getOrInitField(field.field);
+                schema.getOrInitCollection(collection.collection).getOrInitField(field.field);
               }
             } else {
               schemaField.addTypes(toTypescriptType(field.schema.data_type));
@@ -117,6 +115,7 @@ export class Schema {
       );
     }
     await Promise.all(promises);
+    // await Bun.write("fields.json", JSON.stringify(debugFields, null, 2));
     // await Bun.write("debugAlias.json", JSON.stringify(debugAlias, null, 2));
     // const possibleSpecials = Array.from(debugSpecial).map((s) => s.split("|"));
     // console.log(possibleSpecials);
@@ -134,14 +133,18 @@ export class Schema {
     lines.push("// Auto-generated. Do not edit manually.\n");
 
     directusSdkImports.length > 0 &&
-      lines.push(
-        `import type { ${directusSdkImports.join(", ")} } from "@directus/sdk";\n`,
-      );
+      lines.push(`import type { ${directusSdkImports.join(", ")} } from "@directus/sdk";\n`);
+
+    for (const { name, type } of DEFAULT_TYPES) {
+      lines.push(`${_export ? "export " : ""}type ${name} = ${type};\n`);
+    }
 
     // DatabaseSchema interface
     lines.push(`${_export ? "export " : ""}interface ${schemaName} {`);
     for (const [collectionName, typeName] of this.collections) {
-      lines.push(`  ${collectionName}: ${typeName}[];`);
+      lines.push(
+        `  ${collectionName}: ${typeName}${this.schema[collectionName]?.singleton ? "" : "[]"};`,
+      );
     }
     lines.push("}\n");
 

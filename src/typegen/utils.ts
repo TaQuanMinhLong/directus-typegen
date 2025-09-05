@@ -4,6 +4,13 @@ const DIRECTUS_COLLECTIONS = {
   directus_roles: "DirectusRole",
 } as Record<string, string>;
 
+export const DEFAULT_TYPES = [
+  {
+    name: "DateString",
+    type: "Date | string",
+  },
+] as const;
+
 const InterfaceCache = new Map<string, string>();
 
 export function toInterfaceName(collection: string) {
@@ -35,10 +42,7 @@ export type DatabaseFieldType =
   | "numeric"
   | "timestamp without time zone";
 
-export function toTypescriptType(
-  fieldType: DatabaseFieldType | (string & {}),
-  defaultAny = false,
-) {
+export function toTypescriptType(fieldType: DatabaseFieldType | (string & {}), defaultAny = false) {
   switch (fieldType) {
     case "uuid":
     case "character varying":
@@ -58,7 +62,7 @@ export function toTypescriptType(
     case "boolean":
       return "boolean";
     case "date":
-      return "Date";
+      return "DateString";
     default:
       if (defaultAny) {
         console.warn(`Unknown field type: ${fieldType}`);

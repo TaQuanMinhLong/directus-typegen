@@ -16,9 +16,22 @@ interface RelationalField {
  */
 class M20Field implements RelationalField {
   constructor(
+    /**
+     * The collection of the relation.
+     */
     public collection: string,
+    /**
+     * The field of the collection that linked to the target collection.
+     */
     public field: string,
+    /**
+     * The target collection of the relation.
+     */
     public targetCollection: string,
+    /**
+     * The alias field of the target collection that linked to this collection (often is `o2m`)
+     */
+    public linkedField?: string | null,
   ) {}
 
   applyToSchema(schema: Schema) {
@@ -26,18 +39,13 @@ class M20Field implements RelationalField {
     const field = collection.getOrInitField(this.field);
 
     const targetCollection = schema.getOrInitCollection(this.targetCollection);
-    if (targetCollection.primaryKeyType) {
-      field.addTypes(
-        targetCollection.primaryKeyType,
-        toInterfaceName(this.targetCollection),
-      );
+    if (targetCollection.pkType) {
+      field.addTypes(targetCollection.pkType, toInterfaceName(this.targetCollection));
     }
-    targetCollection
-      .getField(this.field)
-      ?.addTypes(
-        `${toInterfaceName(this.collection)}[]`,
-        collection.primaryKeyType!,
-      );
+    this.linkedField &&
+      targetCollection
+        .getOrInitField(this.linkedField)
+        .addTypes(`${toInterfaceName(this.collection)}[]`);
   }
 }
 
@@ -54,40 +62,32 @@ class M2MField implements RelationalField {
 
   applyToSchema(schema: Schema) {
     const leftCollection = schema.getOrInitCollection(this.leftCollection);
-    if (!leftCollection.primaryKeyType) {
+    if (!leftCollection.pkType) {
       throw new Error(`${this.leftCollection} has no primary key`);
     }
     const rightCollection = schema.getOrInitCollection(this.rightCollection);
-    if (!rightCollection.primaryKeyType) {
+    if (!rightCollection.pkType) {
       throw new Error(`${this.rightCollection} has no primary key`);
     }
 
+    const junctionCollection = schema.getOrInitCollection(this.junctionCollection);
     const JunctionCollectionType = toInterfaceName(this.junctionCollection);
-    const junctionCollection = schema.getOrInitCollection(
-      this.junctionCollection,
-    );
+    const JunctionCollectionPKType = junctionCollection.pkType;
 
-    junctionCollection.getOrInitField("id").addTypes("number");
     junctionCollection
       .getOrInitField(this.junctionLeftField)
-      .addTypes(
-        leftCollection.primaryKeyType,
-        toInterfaceName(this.leftCollection),
-      );
+      .addTypes(leftCollection.pkType, toInterfaceName(this.leftCollection));
     junctionCollection
       .getOrInitField(this.junctionRightField)
-      .addTypes(
-        rightCollection.primaryKeyType,
-        toInterfaceName(this.rightCollection),
-      );
+      .addTypes(rightCollection.pkType, toInterfaceName(this.rightCollection));
 
     leftCollection
       .getField(this.leftField)
-      ?.addTypes("number[]", `${JunctionCollectionType}[]`);
+      ?.addTypes(`${JunctionCollectionPKType}[]`, `${JunctionCollectionType}[]`);
 
     rightCollection
       .getField(this.rightField)
-      ?.addTypes("number[]", `${JunctionCollectionType}[]`);
+      ?.addTypes(`${JunctionCollectionPKType}[]`, `${JunctionCollectionType}[]`);
   }
 }
 
@@ -128,28 +128,23 @@ class M2AField implements RelationalField {
   ) {}
   applyToSchema(schema: Schema): void {
     const ownerCollection = schema.getOrInitCollection(this.ownerCollection);
-    if (!ownerCollection.primaryKeyType) {
+    if (!ownerCollection.pkType) {
       throw new Error(`${this.ownerCollection} has no primary key`);
     }
-    const junctionCollection = schema.getOrInitCollection(
-      this.junctionCollection,
-    );
-    junctionCollection.getOrInitField("id").addTypes("number");
+    const junctionCollection = schema.getOrInitCollection(this.junctionCollection);
     junctionCollection
       .getOrInitField(this.discriminatorField)
-      .addTypes(...this.allowedCollections.map(quoted));
+      .removeTypes("string")
+      .addTypes(...this.allowedCollections.map(quoted), "(string & {})");
     junctionCollection
       .getOrInitField(this.polymorphicField)
       .addTypes("string", ...this.allowedCollections.map(toInterfaceName));
     junctionCollection
       .getOrInitField(this.junctionOwnerField)
-      .addTypes(
-        ownerCollection.primaryKeyType,
-        toTypescriptType(toInterfaceName(this.ownerCollection)),
-      );
+      .addTypes(ownerCollection.pkType, toTypescriptType(toInterfaceName(this.ownerCollection)));
     ownerCollection
       .getField(this.ownerField)
-      ?.addTypes("number[]", `${toInterfaceName(this.junctionCollection)}[]`);
+      ?.addTypes(`${junctionCollection.pkType}[]`, `${toInterfaceName(this.junctionCollection)}[]`);
   }
 }
 
@@ -167,9 +162,8 @@ export class Relations {
   constructor(private relations: DirectusRelation[]) {}
 
   static async init(directus: Directus) {
-    const response = await directus.request<DirectusRelation[]>(
-      readRelations(),
-    );
+    const response = await directus.request<DirectusRelation[]>(readRelations());
+    // await Bun.write("relations.json", JSON.stringify(response, null, 2));
     return new Relations(response);
   }
 
@@ -204,7 +198,7 @@ export class Relations {
     for (const rel of this.relations) {
       if (this.isM2O(rel)) {
         this.m2o.push(
-          new M20Field(rel.collection, rel.field, rel.related_collection),
+          new M20Field(rel.collection, rel.field, rel.related_collection, rel.meta.one_field),
         );
         continue;
       }
@@ -215,7 +209,7 @@ export class Relations {
       }
       if (this.isM2A(rel)) {
         // debugM2A.push(rel)
-        if (this.rawM2A[rel.collection]) throw new Error("M2A xists");
+        if (this.rawM2A[rel.collection]) throw new Error("M2A exists");
         this.rawM2A[rel.collection] = rel;
         continue;
       }
@@ -236,7 +230,7 @@ export class Relations {
           const rel = _left || _right;
           if (rel) {
             this.m2o.push(
-              new M20Field(rel.collection, rel.field, rel.related_collection),
+              new M20Field(rel.collection, rel.field, rel.related_collection, rel.meta.one_field),
             );
           }
           continue;
